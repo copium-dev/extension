@@ -1,8 +1,8 @@
 {
-  "name": "LinkedIn Job Tracker",
+  "name": "copium.dev",
   "version": "1.0",
   "manifest_version": 3,
-  "description": "Track job applications from LinkedIn and enhance comment editors",
+  "description": "Add job applications to copium.dev",
   "action": {
     "default_popup": "index.html"
   },
@@ -18,7 +18,7 @@
   ],
   "web_accessible_resources": [
     {
-      "resources": ["/favicon.png", "frontend/static/button-component.js"],
+      "resources": ["/favicon.png"],
       "matches": ["*://*.linkedin.com/*"]
     }
   ],
