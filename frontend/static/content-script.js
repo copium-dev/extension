@@ -34,14 +34,18 @@
     img.alt = "Logo";
 
     Object.assign(img.style, {
-      height: "20px",
-      width: "20px",
+      height: "16px",
+      width: "16px",
       marginRight: "2px",
       verticalAlign: "middle",
     });
 
     const textSpan = document.createElement("span");
     textSpan.textContent = "Add";
+
+    Object.assign(textSpan.style, {
+      maxHeight: "20px"
+    })
 
     button.appendChild(img);
     button.appendChild(textSpan);
@@ -59,6 +63,7 @@
       display: "inline-flex",
       alignItems: "center",
       justifyContent: "center",
+      maxHeight: "40px"
     });
 
     button.addEventListener("click", function (e) {
