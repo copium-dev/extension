@@ -3,7 +3,7 @@
   import Input from "$lib/components/ui/input/input.svelte";
 </script>
 
-<div class="m-5 rounded border border-dashed w-[300px]">
+<div class="m-2 rounded border border-dashed w-[300px]">
   <div class="flex flex-col gap-1 p-5 rounded">
     <Input type="text" placeholder="Company" />
     <Input type="text" placeholder="Role" />

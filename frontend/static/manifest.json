@@ -1,19 +1,28 @@
 {
-    "manifest_version": 3,
-    "name": "copium.dev",
-    "version": "1.0.0",
-    "description": "Add Applications to your copium.dev dashboard",
-    "action": {
-        "default_title": "copium.dev",
-        "default_popup": "index.html",
-        "default_icon": {
-            "16": "favicon.png",
-            "48": "favicon.png",
-            "128": "favicon.png"
-        }
-    },
-    "permissions": [
-        "activeTab",
-        "scripting"
-    ]
+  "name": "LinkedIn Job Tracker",
+  "version": "1.0",
+  "manifest_version": 3,
+  "description": "Track job applications from LinkedIn and enhance comment editors",
+  "action": {
+    "default_popup": "index.html"
+  },
+  "permissions": ["activeTab", "storage"],
+  "host_permissions": ["*://*.linkedin.com/*"],
+  "content_scripts": [
+    {
+      "matches": ["*://*.linkedin.com/*"],
+      "js": ["content-script.js"],
+      "run_at": "document_idle",
+      "all_frames": false
+    }
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": ["/favicon.png", "frontend/static/button-component.js"],
+      "matches": ["*://*.linkedin.com/*"]
+    }
+  ],
+  "background": {
+    "service_worker": "background.js"
+  }
 }
